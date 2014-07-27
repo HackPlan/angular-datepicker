@@ -14,7 +14,7 @@
 
 [date-range] [date-picker] {
   .after.before{
-    .buttonBackground(@btnInfoBackground, spin(@btnInfoBackgroundHighlight, 20));
+    .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
   }
 }
 
@@ -23,7 +23,6 @@
   .border-radius(4px);
 
   /* GENERAL */
-
   padding: 4px;
 
   table {
@@ -54,7 +53,7 @@
 			cursor: pointer;
 			.border-radius(4px);
 			&:hover {
-				background: @grayLighter;
+				background: #eee;
 			}
 			&.disabled, &.disabled:hover {
 				background:none;
@@ -65,13 +64,19 @@
   }
 
   .active , .now{
-    .buttonBackground(@btnPrimaryBackground, spin(@btnPrimaryBackground, 20));
+    background: @btnPrimaryBackground;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    &:hover{
+      background: @btnPrimaryBackgroundHighlight !important;
+    }
   }
 
   .now {
-    .buttonBackground(@btnDangerBackground, spin(@btnDangerBackground, 20));
+    background: @btnDangerBackground;
+    &:hover{
+      background: @btnDangerBackgroundHighlight !important;
+    }
   }
 
   .disabled {
@@ -103,4 +108,32 @@
     background: @grayLighter;
 	  cursor: pointer;
   }
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
