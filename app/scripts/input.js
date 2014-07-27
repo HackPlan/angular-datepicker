@@ -17,7 +17,7 @@ Module.constant('dateTimeConfig', {
         (attrs.partial ? 'partial="' + attrs.partial + '" ' : '') +
         'class="dropdown-menu"></div>';
   },
-  format: 'yyyy-MM-dd HH:mm',
+  format: 'YYYY-MM-DD HH:mm',
   views: ['date', 'year', 'month', 'hours', 'minutes'],
   dismiss: false,
   position: 'relative'
@@ -33,9 +33,11 @@ Module.directive('dateTimeAppend', function () {
   };
 });
 
-Module.directive('dateTime', ['$compile', '$document', '$filter', 'dateTimeConfig', '$parse', function ($compile, $document, $filter, dateTimeConfig, $parse) {
+Module.directive('dateTime',
+        ['$compile', '$document', '$filter', 'dateTimeConfig', '$parse',
+function ($compile ,  $document ,  $filter ,  dateTimeConfig ,  $parse) {
   var body = $document.find('body');
-  var dateFilter = $filter('date');
+  var momentFormat = $filter('momentFormat');
 
   return {
     require: 'ngModel',
@@ -59,7 +61,7 @@ Module.directive('dateTime', ['$compile', '$document', '$filter', 'dateTimeConfi
 
 
       function formatter(value) {
-        return dateFilter(value, format);
+        return momentFormat(value, format);
       }
 
       function parser() {

@@ -146,7 +146,9 @@ function isSameMinutes(model, date) {
 
 
 
-Module.directive('datePicker', ['datePickerConfig', function datePickerDirective(datePickerConfig) {
+Module.directive('datePicker',
+                           ['datePickerConfig',
+function datePickerDirective(datePickerConfig) {
 
   //noinspection JSUnusedLocalSymbols
   return {

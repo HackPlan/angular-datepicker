@@ -7,9 +7,12 @@
     "./dist/index.css"
   ],
   "ignore": [
-    ".gitignore","README.md"
+    ".gitignore",
+    "README.md"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "moment": "~2.7.0"
+  },
   "devDependencies": {
     "angular": "1.2.14",
     "angular-mocks": "1.2.14",
