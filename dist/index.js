@@ -600,7 +600,7 @@ angular.module("datePicker").run(["$templateCache", function($templateCache) {
     "      <thead>\n" +
     "      <tr>\n" +
     "        <th ng-click=\"prev(24)\">‹</th>\n" +
-    "        <th colspan=\"5\" class=\"switch\" ng-click=\"setView('date')\">{{ date|momentFormat:\"DD MMMM YYYY\" }}</th>\n" +
+    "        <th colspan=\"5\" class=\"switch\" ng-click=\"setView('date')\">{{ date|momentFormat:\"LL\" }}</th>\n" +
     "        <th ng-click=\"next(24)\">›</i></th>\n" +
     "      </tr>\n" +
     "      </thead>\n" +
@@ -620,7 +620,7 @@ angular.module("datePicker").run(["$templateCache", function($templateCache) {
     "      <thead>\n" +
     "      <tr>\n" +
     "        <th ng-click=\"prev()\">‹</th>\n" +
-    "        <th colspan=\"5\" class=\"switch\" ng-click=\"setView('hours')\">{{ date|momentFormat:\"DD MMMM YYYY\" }}\n" +
+    "        <th colspan=\"5\" class=\"switch\" ng-click=\"setView('hours')\">{{ date|momentFormat:\"LL\" }}\n" +
     "        </th>\n" +
     "        <th ng-click=\"next()\">›</i></th>\n" +
     "      </tr>\n" +

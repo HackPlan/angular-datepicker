@@ -68,7 +68,7 @@
       <thead>
       <tr>
         <th ng-click="prev(24)">‹</th>
-        <th colspan="5" class="switch" ng-click="setView('date')">{{ date|momentFormat:"DD MMMM YYYY" }}</th>
+        <th colspan="5" class="switch" ng-click="setView('date')">{{ date|momentFormat:"LL" }}</th>
         <th ng-click="next(24)">›</i></th>
       </tr>
       </thead>
@@ -88,7 +88,7 @@
       <thead>
       <tr>
         <th ng-click="prev()">‹</th>
-        <th colspan="5" class="switch" ng-click="setView('hours')">{{ date|momentFormat:"DD MMMM YYYY" }}
+        <th colspan="5" class="switch" ng-click="setView('hours')">{{ date|momentFormat:"LL" }}
         </th>
         <th ng-click="next()">›</i></th>
       </tr>
