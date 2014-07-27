@@ -540,7 +540,7 @@ angular.module("datePicker").run(["$templateCache", function($templateCache) {
     "        <th ng-click=\"next()\">›</i></th>\n" +
     "      </tr>\n" +
     "      <tr>\n" +
-    "        <th ng-repeat=\"day in weekdays\" style=\"overflow: hidden\">{{ day|momentFormat:\"ddd\" }}</th>\n" +
+    "        <th ng-repeat=\"day in weekdays\" style=\"overflow: hidden\">{{ day|momentFormat:\"dd\" }}</th>\n" +
     "      </tr>\n" +
     "      </thead>\n" +
     "      <tbody>\n" +
