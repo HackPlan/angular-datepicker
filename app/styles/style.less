@@ -27,6 +27,7 @@
 
   table {
     margin: 0;
+    width: 100%;
   }
 
   td, th {
@@ -36,7 +37,7 @@
     height: 20px;
     .border-radius(4px);
     border: none;
-
+    background: #fff;
   }
 
   .switch{
@@ -111,7 +112,7 @@
 
 }
 
-.dropdown-menu {
+[date-picker].dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -119,12 +120,12 @@
   display: none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 1px;
   margin: 2px 0 0;
   list-style: none;
   background-color: #ffffff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
   -webkit-border-radius: 6px;
